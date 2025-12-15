@@ -24,15 +24,17 @@ impl Compiler for Vyper {
     }
 }
 
-
 fn compile(lang: &impl Compiler, file_path: &str) -> String {
     lang.compile(file_path)
 }
 
-
 fn main() {
-    let sol = Solidity {version: "0.0.1".to_string()};
-    let vy = Vyper {version: "0.0.2".to_string()};
+    let sol = Solidity {
+        version: "0.0.1".to_string(),
+    };
+    let vy = Vyper {
+        version: "0.0.2".to_string(),
+    };
 
     println!("{}", compile(&sol, "source.sol"));
     println!("{}", compile(&vy, "source.vy"));

@@ -13,7 +13,6 @@ fn main() {
     // println!("s: {s}");
     println!("s1: {s1}");
 
-
     // 离开作用域后，值被丢弃
     let s = String::from("aaa");
     {

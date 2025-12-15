@@ -1,4 +1,3 @@
-
 #![allow(unused)]
 
 #[derive(Debug)]
@@ -15,7 +14,7 @@ fn div(a: i32, b: i32) -> Result<i32, MathError> {
 }
 
 fn main() {
-    let x = [1,2 ,3];
+    let x = [1, 2, 3];
     let v = x.get(9);
     if let Some(x) = v {
         println!("x is {x}");
@@ -28,6 +27,6 @@ fn main() {
     let c = div(a, b);
     match c {
         Ok(v) => println!("{a} / {b} = {v}"),
-        Err(e) => println!("{a} / {b} => {:?}", e)
+        Err(e) => println!("{a} / {b} => {:?}", e),
     }
 }

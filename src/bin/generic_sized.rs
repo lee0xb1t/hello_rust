@@ -1,16 +1,14 @@
 #![allow(unused)]
 
-fn f<T: Sized>(x: T) {
-}
+fn f<T: Sized>(x: T) {}
 
 fn q<T: ?Sized>(x: &T) -> &T {
     x
 }
 
-trait A{}
+trait A {}
 
-impl A for i32 {
-}
+impl A for i32 {}
 
 fn main() {
     let x = 1i32;
@@ -18,11 +16,11 @@ fn main() {
     // q(x); //compile error
 
     struct S {
-        x: i32, 
+        x: i32,
         y: i32,
     }
 
-    let s = S {x: 0, y: 0};
+    let s = S { x: 0, y: 0 };
     f(s);
     // q(&s); //compile error
 
@@ -41,7 +39,7 @@ fn main() {
     let s: &str = "hello";
     f(s);
     q(s);
-    
+
     let d = Box::new(1i32);
     let d = q(&d);
 }

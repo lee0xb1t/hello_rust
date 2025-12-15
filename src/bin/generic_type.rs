@@ -37,10 +37,7 @@ impl<T: std::default::Default> Point<T> {
     }
 
     fn new(x: T, y: T) -> Self {
-        Self {
-            x: x,
-            y: y,
-        }
+        Self { x: x, y: y }
     }
 
     fn move_to(&mut self, x: T, y: T) {
@@ -50,8 +47,11 @@ impl<T: std::default::Default> Point<T> {
 }
 
 fn main() {
-    let p = Point{ x: 1.0f32, y: 2.0f32 };
-    let p = Point{ x: 1, y: 2 };
+    let p = Point {
+        x: 1.0f32,
+        y: 2.0f32,
+    };
+    let p = Point { x: 1, y: 2 };
 
     let t = (1, 2u32);
     let s = swap(t);

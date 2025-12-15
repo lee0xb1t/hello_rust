@@ -1,4 +1,3 @@
-
 fn borrow(s: &[i32]) {
     println!("borrow {:?}", s);
 }

@@ -32,7 +32,7 @@ fn main() {
         color: "red".to_string(),
         x: 0,
         y: 0,
-        size: 10
+        size: 10,
     };
 
     s.color.clone();

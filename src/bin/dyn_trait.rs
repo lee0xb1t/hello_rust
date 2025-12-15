@@ -19,7 +19,6 @@ impl Animal for Dog {
     }
 }
 
-
 fn speak(a: &impl Animal) {
     println!("static speak: {}", a.speak());
 }
@@ -48,7 +47,6 @@ fn dyn_speak2(animal: &impl AsRef<dyn Animal>) {
     println!("dyn speak1: {}", animal.as_ref().speak());
 }
 
-
 fn main() {
     let d = Dog;
     let c = Cat;
@@ -61,7 +59,7 @@ fn main() {
     let animal = "cat";
     let animal: &dyn Animal = match animal {
         "dog" => &Dog,
-        _ => &Cat
+        _ => &Cat,
     };
 
     dyn_speak(animal);

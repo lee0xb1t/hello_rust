@@ -1,26 +1,24 @@
-
 #![allow(unused)]
 
 fn main() {
     // create
     let v = vec![-1, 0, 1];
     let v = vec![1, 2, 3];
-    let v = vec!(1, 2, 3);
+    let v = vec![1, 2, 3];
     let v: Vec<i32> = Vec::new();
 
     let v = vec![1u32, 2, 3];
     let v = vec![1u8; 5];
 
     println!("v = {:?}, len = {}", v, v.len());
-    
 
     // get
     let v = vec![1, 2, 3];
-    let x = v[0];  // 如果向量为空则恐慌
-    let x = v.get(9);  // 返回Option
+    let x = v[0]; // 如果向量为空则恐慌
+    let x = v.get(9); // 返回Option
     match x {
         Some(val) => println!("{val}"),
-        None => println!("none")
+        None => println!("none"),
     }
 
     // update
@@ -37,9 +35,8 @@ fn main() {
     let x = v.pop();
     match x {
         Some(val) => println!("{val}"),
-        None => println!("none")
+        None => println!("none"),
     }
-    
 
     //slice
     let v = vec![1, 2, 3];
@@ -66,5 +63,4 @@ fn main() {
     for x in v {
         println!("{x}");
     }
-
 }

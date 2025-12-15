@@ -11,7 +11,6 @@ fn main() {
     println!("{}", *s1);
     println!("{} {s1}", s1);
 
-
     // Mutable borrow
     let mut s = String::from("Hello");
     let s1 = &mut s;
@@ -21,7 +20,7 @@ fn main() {
 
     s1.push_str(" Rust");
     println!("{}", s);
-    
+
     // s1使用完可以再次创建可变借用
     let s2 = &mut s;
 
@@ -40,7 +39,6 @@ fn main() {
     // std::mem::drop(s);
 
     println!("{}", s1);
-
 
     // 函数的借用
     let s = String::from("Hello1");
