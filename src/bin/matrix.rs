@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 // struct Matrix<const M: usize, const N: usize> {  // compile error
 //     data: [f64; M * N]
 // }

@@ -40,6 +40,20 @@ fn main() {
 
     //slice
     let v = vec![1, 2, 3];
+
+    /*
+    v47[0] = _$LT$alloc..vec..Vec$LT$T$C$A$GT$$u20$as$u20$core..ops..index..Index$LT$I$GT$$GT$::index::heb6e3755bb2db048(
+             &v46, // slice ptr
+             0i64,  // slice start
+             (core::ops::range::Range<usize> *)2, // slice end
+             (core::panic::location::Location *)&off_14001FA00);
+
+    v47[0] = _$LT$alloc..vec..Vec$LT$T$C$A$GT$$u20$as$u20$core..ops..index..Index$LT$I$GT$$GT$::index::heb6e3755bb2db048(
+            &v46,
+            (alloc::vec::Vec<i32,alloc::alloc::Global> *)1,
+            (core::ops::range::Range<usize> *)2,
+            (core::panic::location::Location *)&off_14001FA00);
+     */
     let s = &v[0..2];
     println!("vec slice: {:?}", s);
 
